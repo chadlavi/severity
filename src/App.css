@@ -11,7 +11,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #111;
-    --border: #333;
+    --border: #555;
     --link: #6c6cf0;
     --critical-background: #6b0a0a;
     --critical-text: var(--text-color);
