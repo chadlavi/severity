@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+:root {
+  --background: white;
+  --border: #ddd;
+  --link: #55e;
+  --critical-text: #cf0303;
+  --critical-background: #ffe0e0;
+  --text-color: #111;
+  --zebra: #f8f8f8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111;
+    --border: #333;
+    --link: #6c6cf0;
+    --critical-background: #6b0a0a;
+    --critical-text: var(--text-color);
+    --text-color: white;
+    --zebra: #242424;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--link);
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  max-width: 100%;
+  width: 760px;
+  margin: auto;
+}
+form, label {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+label {
+  margin-block-end: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+label > span {
+  font-size: 0.9rem;
+  margin-block-end: 3px;
+}
+
+input {
+  background-color: var(--background);
+  color: var(--text-color);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: inherit;
+}
+
+.result {
+  margin-block-start: 16px;
+  background: var(--zebra);
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 16px;
+}
+
+.critical {
+  color: var(--critical-text);
+  background: var(--critical-background);
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 16px;
   }
 }
