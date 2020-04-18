@@ -37,7 +37,7 @@ export type Triage = 'cosmetic' | 'low' | 'medium' | 'high' | 'critical'
  * ```
  */
 export const triage = (impact: number, customers: number): Triage => {
-  if (impact < 12.5) return 'cosmetic'
+  if (impact < 10) return 'cosmetic'
   if (impact < 25 && customers < 25) return 'low'
   if (
     (impact < 90 && customers < 25) ||

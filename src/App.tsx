@@ -70,11 +70,11 @@ const App = (): JSX.Element => {
       </main>
       <footer>
         <a
-          href='https://github.com/chadlavi/severity'
+          href='https://github.com/chadlavi/severity/blob/master/src/triage.ts'
           rel='noopener noreferrer'
           target='_blank'
         >
-          {'https://github.com/chadlavi/severity'}
+          How is this calculated?
         </a>
       </footer>
     </>
