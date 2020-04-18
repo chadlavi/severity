@@ -50,7 +50,7 @@ const App = (): JSX.Element => {
           </label>
           <label>
             <span>
-              On a scale of 0 to 100, how much does this inhibit an affected user&rsquo;s ability to use the app?
+              On a scale of 1 to 100, how much does this inhibit an affected user&rsquo;s ability to use the app?
             </span>
             <input
               inputMode={'decimal'}
