@@ -24,6 +24,9 @@ module.exports = {
     'max-len': ['error', { 'code': 120 }],
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
+    'object-curly-spacing': ['error', 'never'],
+    'array-bracket-spacing': ['error', 'never'],
+    'computed-property-spacing': ['error', 'never'],
     '@typescript-eslint/member-delimiter-style': ['error', {
       multiline: {
         delimiter: 'none',

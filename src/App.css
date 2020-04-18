@@ -40,11 +40,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-main {
+main, footer {
   max-width: 100%;
   width: 760px;
   margin: auto;
 }
+
 form, label {
   display: flex;
   flex-direction: column;
@@ -70,6 +71,7 @@ input {
 
 .result {
   margin-block-start: 16px;
+  margin-block-end: 16px;
   background: var(--zebra);
   padding: 32px 24px;
   text-align: center;
@@ -82,8 +84,18 @@ input {
   background: var(--critical-background);
 }
 
+
+footer {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+a, a:visited {
+  color: var(--link);
+}
+
 @media (max-width: 600px) {
-  main {
+  main, footer {
     padding: 16px;
   }
 }
