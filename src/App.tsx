@@ -41,7 +41,7 @@ const App = (): JSX.Element => {
       <CSSVariables/>
       <GlobalStyles/>
       <Page>
-        <Grid spacing={8}>
+        <Grid spacing={16}>
           <GridItem>
             <Header>
               Bug prioritizer
@@ -82,7 +82,7 @@ const App = (): JSX.Element => {
               : null
           }
           <GridItem>
-            <Paragraph className={'footer'}>
+            <Paragraph margins={false} className={'footer'}>
               Built with <Link href={'https://chadlavi.github.io/clear/'}>Clear</Link>
               &nbsp;&middot;&nbsp;<Link href='https://github.com/chadlavi/severity/blob/master/src/triage.ts'>How is
               this calculated?</Link>
