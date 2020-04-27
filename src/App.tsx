@@ -1,6 +1,17 @@
 import React from 'react'
 import './App.css'
 import {triage, Triage} from './triage'
+import {
+  CSSVariables,
+  GlobalStyles,
+  Grid,
+  GridItem,
+  Header,
+  Input,
+  Link,
+  Page,
+  Paragraph,
+} from '@chadlavi/clear'
 
 const emoji: {[key in Triage]: string} = {
   cosmetic: '🙃',
@@ -21,38 +32,35 @@ const App = (): JSX.Element => {
   const onChange = (
     setter: React.Dispatch<React.SetStateAction<number|undefined>>
   ) => (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const newValue = parseFloat(e.currentTarget.value)
+    const newValue = parseFloat(e.currentTarget.value || '0')
     if ((0 <= newValue && newValue <= 100) || !newValue) setter(newValue)
   }
 
   return (
     <>
-      <main>
-        <h1>
-          Bug prioritizer
-        </h1>
-        <form
-          autoComplete={'false'}
-        >
-          <label>
-            <span>
-              What percentage of users does this impact?
-            </span>
-            <input
+      <CSSVariables/>
+      <GlobalStyles/>
+      <Page>
+        <Grid spacing={8}>
+          <GridItem>
+            <Header>
+              Bug prioritizer
+            </Header>
+          </GridItem>
+          <GridItem>
+            <Input
               inputMode={'decimal'}
               max={100}
               min={0}
               name={'customers'}
               onChange={onChange(setCustomers)}
               type={'number'}
-              value={customers || ''}
+              value={customers}
+              label={'What percentage of users does this impact?'}
             />
-          </label>
-          <label>
-            <span>
-              On a scale of 1 to 100, how much does this inhibit an affected user&rsquo;s ability to use the app?
-            </span>
-            <input
+          </GridItem>
+          <GridItem>
+            <Input
               inputMode={'decimal'}
               max={100}
               min={0}
@@ -60,23 +68,29 @@ const App = (): JSX.Element => {
               onChange={onChange(setImpact)}
               pattern={'[0-9.]*'}
               type={'number'}
-              value={impact || ''}
+              value={impact}
+              label={'On a scale of 1 to 100, how much does prevent an affected user from using the app?'}
             />
-          </label>
-        </form>
-        {(customers && impact) ? <div className={`result ${severity}`}>
-          {emoji[severity]} Sounds like this is a <u>{severityString}</u> bug
-        </div> : ''}
-      </main>
-      <footer>
-        <a
-          href='https://github.com/chadlavi/severity/blob/master/src/triage.ts'
-          rel='noopener noreferrer'
-          target='_blank'
-        >
-          How is this calculated?
-        </a>
-      </footer>
+          </GridItem>
+          {
+            (customers && impact)
+              ? <GridItem>
+                <Paragraph className={`result ${severity}`}>
+                  {emoji[severity]} Sounds like this is a <u>{severityString}</u> bug
+                </Paragraph> 
+              </GridItem>
+              : null
+          }
+          <GridItem>
+            <Paragraph className={'footer'}>
+              Built with <Link href={'https://chadlavi.github.io/clear/'}>Clear</Link>
+              &nbsp;&middot;&nbsp;<Link href='https://github.com/chadlavi/severity/blob/master/src/triage.ts'>How is
+              this calculated?</Link>
+            </Paragraph>
+          </GridItem>
+        </Grid>
+      </Page>
+      
     </>
   )
 }
