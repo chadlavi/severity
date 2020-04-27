@@ -16,7 +16,7 @@ import {
 const emoji: {[key in Triage]: string} = {
   cosmetic: '🙃',
   low: '🤔',
-  medium: '☹️',
+  medium: '🙁',
   high: '😫',
   critical: '🥵',
 }
