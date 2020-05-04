@@ -11,6 +11,7 @@ import {
   Link,
   Page,
   Paragraph,
+  Label,
 } from '@chadlavi/clear'
 
 const emoji: {[key in Triage]: string} = {
@@ -48,28 +49,32 @@ const App = (): JSX.Element => {
             </Header>
           </GridItem>
           <GridItem>
+            <Label htmlFor={'customers'}>What percentage of users does this impact?</Label>
             <Input
               inputMode={'decimal'}
               max={100}
               min={0}
+              id={'customers'}
               name={'customers'}
               onChange={onChange(setCustomers)}
               type={'number'}
               value={customers}
-              label={'What percentage of users does this impact?'}
             />
           </GridItem>
           <GridItem>
+            <Label htmlFor={'impact'}>
+              On a scale of 1 to 100, how much does prevent an affected user from using the app?
+            </Label>
             <Input
               inputMode={'decimal'}
               max={100}
               min={0}
+              id={'impact'}
               name={'impact'}
               onChange={onChange(setImpact)}
               pattern={'[0-9.]*'}
               type={'number'}
               value={impact}
-              label={'On a scale of 1 to 100, how much does prevent an affected user from using the app?'}
             />
           </GridItem>
           {
