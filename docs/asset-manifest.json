@@ -5,17 +5,17 @@
     "main.js.map": "/severity/static/js/main.e911ddfa.chunk.js.map",
     "runtime-main.js": "/severity/static/js/runtime-main.3eb36a25.js",
     "runtime-main.js.map": "/severity/static/js/runtime-main.3eb36a25.js.map",
-    "static/js/2.0a5a745e.chunk.js": "/severity/static/js/2.0a5a745e.chunk.js",
-    "static/js/2.0a5a745e.chunk.js.map": "/severity/static/js/2.0a5a745e.chunk.js.map",
+    "static/js/2.28c58ce6.chunk.js": "/severity/static/js/2.28c58ce6.chunk.js",
+    "static/js/2.28c58ce6.chunk.js.map": "/severity/static/js/2.28c58ce6.chunk.js.map",
     "index.html": "/severity/index.html",
-    "precache-manifest.0eb13812e97f4b32fffc0fe8bdeee972.js": "/severity/precache-manifest.0eb13812e97f4b32fffc0fe8bdeee972.js",
+    "precache-manifest.df738d296bd60fadeb961189121fb9c9.js": "/severity/precache-manifest.df738d296bd60fadeb961189121fb9c9.js",
     "service-worker.js": "/severity/service-worker.js",
     "static/css/main.bff420b6.chunk.css.map": "/severity/static/css/main.bff420b6.chunk.css.map",
-    "static/js/2.0a5a745e.chunk.js.LICENSE.txt": "/severity/static/js/2.0a5a745e.chunk.js.LICENSE.txt"
+    "static/js/2.28c58ce6.chunk.js.LICENSE.txt": "/severity/static/js/2.28c58ce6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3eb36a25.js",
-    "static/js/2.0a5a745e.chunk.js",
+    "static/js/2.28c58ce6.chunk.js",
     "static/css/main.bff420b6.chunk.css",
     "static/js/main.e911ddfa.chunk.js"
   ]
